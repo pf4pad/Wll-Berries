@@ -369,4 +369,9 @@ body {
     margin-bottom: 5px;
   }
   
+  .payment-logo{
+    display: block;
+    margin-bottom: 15px;
+
+  }
 }
