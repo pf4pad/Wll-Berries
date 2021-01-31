@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-
+:root {
+  --L: Lato, sans-serif;
+  --RSlab: 'Roboto Slab', serif;
+}
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {
-
-  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-family: var(--L);
 }
 
 .header {
@@ -22,90 +22,72 @@ body {
   margin: 0;
 }
 
-
-
 .navigation-link {
   text-decoration: none;
-
+  color: #939699;
+  font-family: var(--L);
   font-style: normal;
   font-weight: 900;
   font-size: 14px;
   line-height: 20px;
+  align-items: center;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #939699;
-
 }
 
 .button {
-  display: flex;
-  align-items: center;
   padding: 10px 20px;
   background: #4592FF;
   border-radius: 20px;
-  font-family: 'Lato', sans-serif;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: var(--L);
   font-style: normal;
   font-weight: 900;
   font-size: 14px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  line-height: 20px;
+  color: #FFFFFF;
 }
 
-.button-icon,
-.button-price {
+.button-icon, .button-price {
   margin-right: 10px;
 }
 
 .button-icon:last-child {
-
   margin-right: 0;
   margin-left: 10px;
 }
 
 .slide {
-
   padding-top: 90px;
   padding-bottom: 110px;
   min-height: 568px;
 }
 
 .slide-1 {
-  background: url(../img/slide-image-1.png) no-repeat top right 27%;
-  background-color: #B4D1E0;
-  padding-top: 90px;
-  padding-bottom: 110px;
+  background: #B4D1E0 url("../img/slide-image-1.png") no-repeat top right 40%;
 }
 
-.slide-2 {
-  background: url(../img/slide-image-1.png) no-repeat top right 27%;
-  background-color: #b9eed8;
-  padding-top: 90px;
-  padding-bottom: 110px;
+.slide-2{
+  background: #64e479 url("../img/slide-image-1.png") no-repeat top right 40%;
 }
-.slide-3 {
-  background: url(../img/slide-image-1.png) no-repeat top right 27%;
-  background-color: #f5e9ca;
-  padding-top: 90px;
-  padding-bottom: 110px;
+.slide-3{
+  background: #d89696 url("../img/slide-image-1.png") no-repeat top right 40%;
 }
-
 .label {
-
-  color: #FFFFFF;
+  background: #3DC47E;
   border-radius: 3px;
+  color: #fff;
+  padding: 5px 12px;
+  font-family: var(--L);
   font-size: 12px;
   line-height: 15px;
-  padding: 5px 12px;
-  background-color: #3DC47E;
-  border-radius: 3px;
-
 }
 
 .slide-title {
-  font-family: 'Roboto Slab', serif;
-  font-style: normal;
-  font-weight: 700;
+  font-family: var(--RSlab);
+  font-weight: bold;
   font-size: 55px;
   line-height: 70px;
   color: #262D33;
@@ -114,10 +96,13 @@ body {
 }
 
 .slide-description {
+  font-family: var(--L);
   font-size: 18px;
   line-height: 30px;
-  color: #4B5157;
+  max-width: 335px;
   margin-bottom: 40px;
+  color: #4B5157;
+  font-weight: normal;
 }
 
 .slider {
@@ -129,138 +114,258 @@ body {
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 9;
 }
 
 .slider-button {
   background-color: transparent;
   border: none;
-  opacity: 0.5;
-  
+  cursor: pointer;
+  outline: none;
 }
 
 .card {
-
   min-height: 370px;
   border-radius: 10px;
+  background-size: cover;
   padding-top: 60px;
-  padding-left: 40px;
+  padding-left: 46px;
   padding-right: 46px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .card-1 {
-  background: #E5E5E5 url(../img/card-image-1.jpg) no-repeat top right;
+  background: #e3e2e3 url("../img/card-image-1.jpg") no-repeat top right;
   background-size: cover;
-
 }
-
-
-.card-title {
-  font-family: 'Roboto Slab', serif;
-  font-size: 25px;
-  line-height: 30px;
-  color: #262D33;
-  margin: 0;
-}
-
-.card-text {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 20px;
-  color: #4B5157;
-  padding-top: 15px;
-  margin-bottom: 25px;
-  max-width: 175px;
-}
-
 .card-2 {
-  background: url(../img/card-image-2.jpg) no-repeat top right;
+  background: #e3e2e3 url("../img/card-image-2.jpg") no-repeat top right;
   background-size: cover;
-
 }
-
-.text-light {
-  color: #fff;
-}
-
 .card-3 {
   padding-top: 35px;
-  background: #CCD5E6 url(../img/card-image-3.png) no-repeat top right 10%;
+  background: #CCD5E6 url("../img/card-image-3.png") no-repeat top right 10%;
   background-size: contain;
-  margin-top: 30px;
-
 }
-
 .card-4 {
   padding-top: 35px;
+  padding-bottom: 195px;
   padding-left: 25px;
-  background: #FF4F52 url(../img/card-image-4.png) no-repeat top right;
+  background: #FF4F52 url("../img/card-image-4.png") no-repeat top right;
   background-size: contain;
-  margin-top: 30px;
-
 }
-
-
+.card-title {
+  max-width: 222px;
+  color: #262D33;
+  font-family: var(--RSlab);
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
 
 .card-title.large {
   max-width: 420px;
-  font-family: 'Roboto Slab', serif;
-  font-style: normal;
-  font-weight: bold;
+  color: #262D33;
+  font-family: var(--RSlab);
   font-size: 40px;
   line-height: 50px;
-  color: #262D33;
-  margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.card-text {
+  max-width: 176px;
+  color: #4B5157;
+  font-family: var(--L);
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 25px;
 }
 
 .card-text.large {
   max-width: 320px;
-  font-family: 'Lato', sans-serif;
+  color: #4B5157;
+  font-family: var(--L);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
 
+
+
+.text-light {
+  color: #fff;
+  
+}
+
+
+
+
+
+
+.card-price {
+  font-family: var(--L);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.section-title {
+  font-family: var(--RSlab);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+}
+
+.more {
+  font-family: var(--L);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.goods-card {
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.goods-card .label {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.goods-title {
+  font-family: var(--RSlab);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+  white-space: nowrap;
+}
+
+.goods-discription {
+  font-family: var(--L);
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #4B5157;
 }
 
-.card-price {
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 20px;
-  font-style: normal;
-  color: #FFFFFF;
+.goods-price {
+  font-family: var(--L);
+  font-size: 18px;
+  line-height: 30px;
+  color: #262D33;
+  margin-top: 30px;
 }
 
-@media (max-width: 1200px){
+.footer {
+  background-color: #8F79D4;
+  color: #fff;
+  padding: 40px 0 45px 0;
+}
+
+.footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.footer-menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--L);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.footer-text {
+  font-family:var(--L);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #E7D9FF;
+}
+
+.social-link {
+  text-decoration: none;
+  margin-left: 15px;
+}
+.footer-line{
+  opacity: .5;
+}
+
+
+.top-img{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius:50%
+}
+
+.top-link{
+  text-decoration: none;
+  color: #fff;
+}
+
+.top-link-text{
+  margin-right: 15px;
+}
+
+.payment-logo{
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@media (max-width:1200px){
   .slide-1{
-    background-size: cover;
+    background-size:cover;
   }
   .card-3{
     background-size: cover;
   }
 }
 
-@media (max-width: 992px) {
-  .slider-nav {
+@media (max-width:992px){
+  .slider-nav{
     display: none;
   }
 }
 
-@media (max-width: 576px) {
-  .slide-title {
+@media (max-width:576px){
+  .slide-title{
     font-size: 36px;
     line-height: 1.4;
     margin-bottom: 0;
   }
-
   .card{
     background-position: left top;
     padding: 30px;
     min-height: 300px;
   }
   .card-4{
-    background-position: right top;
+    background-position: top right;
+    min-height: 300px;
+  }
+  .footer-menu-item{
+    margin-bottom: 5px;
   }
 }
